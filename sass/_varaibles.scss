@@ -1,0 +1,130 @@
+$bootstrap-sass-asset-helper: false !default;
+
+
+//
+// Variables
+// --------------------------------------------------
+
+
+//== Colors
+$gray-base:	#000 !default;
+$gray-darker: #3e403e !default;
+$gray-darkest: #101014!default;
+$gray:#858585;
+$gray-lightest:#f4f4f4; 
+$gray-lighter:#eceeed;
+$btn-color:#343a37;
+
+$font-color:#1c2c42;
+$purple:#502e61;
+$dark-purple:#382044;
+$green:#7bc144;
+$dark-green:#56872f;
+$orange:#f69c00;
+$blue:#00407c;
+$dark-orange:#e6b706;
+$darker-blue: #002d57;
+$dark-blue :#26a8e0;
+$mid-blue : #5bb6d5;
+
+$light-blue : #77aad8;
+$white:#fff;
+$black:#000;
+$brand-primary: darken(#428bca, 6.5%) !default; // #337ab7
+$brand-success: #5cb85c !default;
+$brand-info: #5bc0de !default;
+$brand-warning: #f0ad4e !default;
+$brand-danger: #d9534f !default;
+
+//== Fonts
+$font-family-base: 'Source Sans Pro',Arial, Helvetica, sans-serif;
+
+$font-size-base:18px !default;
+$font-size-large:ceil(($font-size-base * 1.11)) !default; // ~20px
+$font-size-small: ceil(($font-size-base * 0.8)) !default; // ~16px
+$font-size-xs-small: ceil(($font-size-base * 0.7)) !default; // ~14px
+$font-size-lm:ceil(($font-size-base * 1.22)) !default; // ~22px
+$font-size-ls:ceil(($font-size-base * 1.4)) !default; // ~28px
+
+
+$font-size-h1: floor(($font-size-base * 3.22)) !default; // ~58px
+$font-size-h2: ceil(($font-size-base * 2.4)) !default; //~48px
+$font-size-h3: ceil(($font-size-base * 1.78)) !default; //~32px
+$font-size-h4:ceil(($font-size-base * 1.44)) !default; // ~26px
+$font-size-h5: ceil(($font-size-base * 1.33)) !default; // ~24px
+$font-size-h6: ceil(($font-size-base * 0.9)) !default; // ~18px
+
+$line-height-base:1.428571429 !default; // 20/14
+
+$padding-base-vertical:6px !default;
+$padding-base-horizontal:12px !default;
+
+$padding-large-vertical:10px !default;
+$padding-large-horizontal:16px !default;
+
+$padding-small-vertical:5px !default;
+$padding-small-horizontal:10px !default;
+
+$padding-xs-vertical:1px !default;
+$padding-xs-horizontal:5px !default;
+
+
+
+//== Functions
+
+%no-style{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+@mixin sprites($width,$height,$x,$y) {
+  width: $width+px;
+  height:$height+px;
+  background:url(../images/bgi/sprites.svg);
+  background-repeat:no-repeat;
+  background-position:$x+px $y+px;
+}
+
+
+%page-title{
+	margin:0 0 70px; 
+	h3 { 
+	
+		font-size:$font-size-h1; font-weight:700; color:$gray-darker; position:relative; margin:0 0 15px; text-transform:uppercase; padding-left:$padding-small-horizontal*5; text-align:center;
+		&:before { content:""; display:block; margin:0 auto 34px; width:1px; height:85px; background:#c4c4c4; }
+		span { display:block; margin:0 0 5px; color:$gray; font-weight:400; font-size:$font-size-h3;  letter-spacing:0.05em; }
+	}
+	@media only screen and (max-width:1170px) {
+		margin:0 0 30px;
+		h3 { 
+		font-size:$font-size-h3; margin:0 0 $padding-small-horizontal*2;
+		span { font-size:$font-size-h3;  }
+		&:before { transform:scale(0.75); -webkit-transform:scale(0.75); -moz-transform:scale(0.75); -ms-transform:scale(0.75); transform-origin:left top; }
+		}
+	}
+	@media only screen and (max-width:1000px) {
+		margin:0 0 30px;
+		h3 { 
+		font-size:$font-size-h4; margin:0;
+		span { font-size:$font-size-h4;  }
+		&:before { transform:scale(0.65); -webkit-transform:scale(0.65); -moz-transform:scale(0.65); -ms-transform:scale(0.65); transform-origin:left top; }
+		}
+	}
+}
+
+%sub-title{
+	h3 { 
+		font-size:$font-size-h1; font-weight:400; color:$dark-blue; position:relative; padding-left:$padding-small-horizontal*5;
+	}
+	@media only screen and (max-width:1170px) {
+		h3 { 
+			font-size:$font-size-h3; margin:0 0 $padding-small-horizontal*2;
+		}
+	}
+	@media only screen and (max-width:767px) {
+		h3 { 
+			font-size:$font-size-h4; padding-left:0;
+		}
+	}
+}
+
