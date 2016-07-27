@@ -28,67 +28,6 @@
 			}
 		};
 
-	$("#notify-form .submit").click(function(event){
-		event.preventDefault();
-
-		dataArr = [];
-		error = false;
-
-		$('#notify-form .input-text.error').removeClass('error');
-		$('#notify-form .error').remove();
-
-		$('#notify-form .field').each(function(index, el) {
-			name = $(this).attr('name');
-			value = $.trim($(this).val());
-			dataArr.push(name + '=' + value);
-			if ($(this).hasClass('required')) {
-				if (value == '') {
-					error = true;
-					$(this).parent().addClass('error');
-					$(this).parent().before('<div class="error">Please provide your ' + name + '</div>');
-				}
-			}
-		});
-
-		validation = new RegExp(/^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/);
-		if ($.trim($('#notify-form .email input').val()) && !validation.test($('#notify-form .email input').val())){
-			error = true;
-			$('#notify-form .email').addClass('error');
-			$('#notify-form .email').before('<div class="error">Please enter a valid email</div>');
-    }
-
-		dataString = dataArr.join('&');
-
-		if (!error) {
-			$.ajax({
-				type: "POST",
-				url: "operations.php",
-				data: dataString,
-				cache: false,
-				success: function(result){
-					if (result == 1) {
-						message = 'Thank you! We will send you a notification when the application window opens.';
-						$('#notify-form .field').val('');
-					}
-					else if (result == -1) {
-						message = 'This email is already registered with us';
-					}
-					else {
-						message = 'There was some error processing the request';
-					}
-					$('#modalWindow .modal-body p').text(message);
-					$('#modalWindow').modal('show');
-					setTimeout(function(){
-						$('#modalWindow').modal('hide');
-					}, 3000);
-				}
-			});
-		}
-
-		return false;
-	});
-
-
 	$doc.ready(function() {
 	/*--------------------------------------------------------------------------------------------------------------------------------------*/		
 		// Remove No-js Class
@@ -104,24 +43,20 @@
 			}).resize();	
 		});
 		
-		/* Custom Checkbox & Radio
-		---------------------------------------------------------------------*/		
-		if($('input[type="checkbox"], input[type="radio"]').length){
-			$('input[type="checkbox"], input[type="radio"]').ezMark();
-		}
 		
 		/* Match Height
 		---------------------------------------------------------------------*/
-		if($('.top-footer .col-sm-4 .col-container').length){
-			$('.top-footer .col-sm-4 .col-container').matchHeight();
+		if($('.product-section .col-container').length){
+			$( ".product-section .col-container" ).each(function( index ) {
+  				$(this).find('img').load(function(){
+					$(".product-section .col-container").matchHeight();	
+				});
+				$(".product-section .col-container").matchHeight();
+			});
 		}
 		
-		if($('#footer .col-sm-3 .col-container').length){
-			$('#footer .col-sm-3 .col-container').matchHeight();
-		}
-		
-		if($('.list-container .col-container').length){
-			$('.list-container .col-container').matchHeight();
+		if($(".equalheight").length){
+			$(".equalheight").matchHeight();		
 		}
 		
 		
@@ -129,21 +64,6 @@
 			
 		//Menu Icon Append prepend for responsive
 		$(window).on('resize', function(){
-			if (screencheck(767)) {
-				if(!$('#menu').length){
-					$('#mainmenu').prepend('<a href="#" id="menu" class="menulines-button"><span class="menulines"></span></a>');
-				}
-				$('#footer .form-col').insertBefore('#footer .get-in-touch');
-				$('.interest-section .middle-container-row').prependTo('.interest-section-box .row');
-				$('.home-intro').insertAfter('.clouds');
-			} else {
-				$("#menu").remove();
-				$('#footer .form-col').insertAfter('#footer .get-in-touch');
-				$('.interest-section .middle-container-row').insertAfter('.interest-section-box .left-container-row');	
-				$('.home-intro').insertAfter('.plain-object');	
-			}
-			$('.arrow-left').css('border-right-width',$(window).width()/2);
-			$('.arrow-right').css('border-left-width',$(window).width()/2);
 		}).resize();
 		
 		
@@ -176,8 +96,7 @@
 				 autoplaySpeed:2000
 			});
 		}
-		
-		
+				
 		if($('.news-slider').length){
 				$('.news-slider').slick({
 				 slidesToShow:2,
@@ -217,8 +136,69 @@
 			}
 		);
 		wow.init();
+		
+		/* Tab Content box 
+		---------------------------------------------------------------------*/
+		var tabBlockElement = $('.tab-data');
+			$(tabBlockElement).each(function() {
+				var $this = $(this),
+					tabTrigger = $this.find(".tabnav li"),
+					tabContent = $this.find(".tabcontent");
+					var textval = [];
+					tabTrigger.each(function() {
+						textval.push( $(this).text() );
+					});	
+				$this.find(tabTrigger).first().addClass("active");
+				$this.find(tabContent).first().show();
+		
+				
+				$(tabTrigger).on('click',function () {
+					$(tabTrigger).removeClass("active");
+					$(this).addClass("active");
+					$(tabContent).hide().removeClass('visible');
+					var activeTab = $(this).find("a").attr("data-rel");
+					$this.find('#' + activeTab).fadeIn('normal').addClass('visible');
+								
+					return false;
+				});
+			
+				var responsivetabActive =  function(){
+				if (screencheck(767)){
+					if( !$('.tabMobiletrigger').length ){
+						$(tabContent).each(function(index) {
+							$(this).before("<h2 class='tabMobiletrigger'>"+textval[index]+"</h2>");	
+							$this.find('.tabMobiletrigger:first').addClass("rotate");
+						});
+						$('.tabMobiletrigger').click('click', function(){
+							var tabAcoordianData = $(this).next('.tabcontent');
+							if($(tabAcoordianData).is(':visible') ){
+								$(this).removeClass('rotate');
+								$(tabAcoordianData).slideUp('normal');
+								//return false;
+							} else {
+								$this.find('.tabMobiletrigger').removeClass('rotate');
+								$(tabContent).slideUp('normal');
+								$(this).addClass('rotate');
+								$(tabAcoordianData).not(':animated').slideToggle('normal');
+							}
+							return false;
+						});
+					}
+						
+				} else {
+					$('.tabMobiletrigger').remove();
+					$this.find(tabTrigger).removeClass("active").first().addClass('active');
+					$this.find(tabContent).hide().first().show();			
+				}
+			};
+			$(window).on('resize', function(){
+				if(!$this.hasClass('only-tab')){
+					responsivetabActive();
+				}
+			}).resize();
+		});
 
-
+		
 		
 /*--------------------------------------------------------------------------------------------------------------------------------------*/		
 	});	

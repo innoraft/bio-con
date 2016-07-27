@@ -5,3 +5,10 @@
     padding: 0 15px;
   }
 }
+@media only screen and (max-width: 1170px) {
+  /* line 9, ../sass/responsive.scss */
+  .container {
+    width: auto;
+    padding: 0 15px;
+  }
+}
