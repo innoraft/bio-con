@@ -388,7 +388,7 @@ input[type="checkbox"], input[type="radio"] {
 ========================================================================================*/
 /* line 59, ../sass/style.scss */
 .container {
-  width: 1440px;
+  width: 1280px;
 }
 
 /* line 61, ../sass/style.scss */
@@ -982,12 +982,4 @@ input[type="checkbox"], input[type="radio"] {
 /* line 255, ../sass/style.scss */
 .news-slider p {
   color: #925c00;
-}
-
-@media only screen and (max-width: 1440px) {
-  /* line 259, ../sass/style.scss */
-  .container {
-    width: auto;
-    padding: 0 25px;
-  }
 }

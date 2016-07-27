@@ -1,0 +1,37 @@
+@import "compass/css3/";
+@import 'varaibles';
+
+@media only screen and (max-width:1400px) {
+	.container { width:1170px; padding:0 $padding-small-horizontal+5; }
+}
+
+@media only screen and (max-width:1170px) {
+}
+
+@media only screen and (max-width:1000px) {
+}
+
+@media only screen and (max-width:800px) {
+
+
+}
+
+@media only screen and (max-width:767px){
+	
+}
+
+
+
+@media only screen and (max-width:567px) {
+}
+
+@media only screen and (max-width:480px){
+}
+
+@media only screen and (max-width:479px) {
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 2) {
+}
+
+

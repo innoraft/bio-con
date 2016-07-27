@@ -56,7 +56,7 @@ input[type="checkbox"], input[type="radio"] { margin:4px 8px 0 ; vertical-align:
 
 /* =Layout Width
 ========================================================================================*/
-.container { width:1440px; }
+.container { width:1280px; }
 
 #header {
 	padding:$padding-large-vertical*2 0; 	
@@ -253,8 +253,4 @@ input[type="checkbox"], input[type="radio"] { margin:4px 8px 0 ; vertical-align:
 		a { color:#5d3b00; text-transform:uppercase; }
 	}
 	p { color:#925c00; }
-}
-
-@media only screen and (max-width:1440px){
-	.container { width:auto; padding:0 25px; }	
 }
