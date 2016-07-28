@@ -561,5 +561,14 @@
 <rect id="_x3C_Slice_x3E__22_" x="73" y="403" fill-rule="evenodd" clip-rule="evenodd" fill="none" width="40" height="40"/>
 <rect id="_x3C_Slice_x3E__23_" x="124" y="403" fill-rule="evenodd" clip-rule="evenodd" fill="none" width="40" height="40"/>
 <rect id="_x3C_Slice_x3E__24_" x="171" y="403" fill-rule="evenodd" clip-rule="evenodd" fill="none" width="40" height="40"/>
-<rect id="_x3C_Slice_x3E__25_" x="-71" y="-39" fill-rule="evenodd" clip-rule="evenodd" fill="none" width="738" height="688"/>
+<g>
+	<path fill-rule="evenodd" clip-rule="evenodd" fill="#76AAD7" d="M45,514c-14.336,0-26-11.664-26-26c0-14.338,11.664-26,26-26
+		s26,11.662,26,26C71,502.336,59.336,514,45,514z M45,463.732c-13.381,0-24.267,10.887-24.267,24.268
+		c0,13.38,10.886,24.266,24.267,24.266S69.267,501.38,69.267,488C69.267,474.619,58.381,463.732,45,463.732z M39.422,501.715
+		c-0.147,0.1-0.318,0.151-0.488,0.151c-0.139,0-0.279-0.033-0.405-0.101c-0.284-0.15-0.462-0.444-0.462-0.766v-26
+		c0-0.322,0.178-0.616,0.461-0.767c0.285-0.15,0.628-0.13,0.895,0.05l19.066,13c0.236,0.162,0.379,0.43,0.379,0.717
+		s-0.143,0.555-0.379,0.715L39.422,501.715z M39.8,476.641v22.719L56.461,488L39.8,476.641z"/>
+</g>
+<rect id="_x3C_Slice_x3E__25_" x="19" y="462" fill-rule="evenodd" clip-rule="evenodd" fill="none" width="52" height="52"/>
+<rect id="_x3C_Slice_x3E__26_" x="-37" y="-21" fill-rule="evenodd" clip-rule="evenodd" fill="none" width="674" height="646"/>
 </svg>

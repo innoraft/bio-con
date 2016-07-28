@@ -203,6 +203,18 @@
 		$('#wrapper').removeClass('zoom-out');
 		return false;
 	});
+	
+	/* custom settings */
+	if($('.venoboxvid').length){
+		$('.venoboxvid').venobox({
+			framewidth: '960px',        // default: ''
+			frameheight: '540px',       // default: ''
+			titleattr: 'data-title',    // default: 'title'
+			numeratio: true,            // default: false
+			infinigall: true            // default: false
+		});
+	}
+
 		
 		
 /*--------------------------------------------------------------------------------------------------------------------------------------*/		
