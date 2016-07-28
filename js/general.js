@@ -65,17 +65,7 @@
 		//Menu Icon Append prepend for responsive
 		$(window).on('resize', function(){
 		}).resize();
-		
-		
-		/* Responsive Main Menu
-		---------------------------------------------------------------------*/
-		$(document).on('click',"#menu", function(){
-			$this = $(this);
-			$(this).toggleClass('menuopen');
-			$('#menu-primary').slideToggle();
-			return false;
-		});
-		
+				
 		
 		$(window).scroll( function(){
 			if( $(window).scrollTop() > 25 ){
@@ -198,6 +188,21 @@
 			}).resize();
 		});
 
+
+	$(document).on('click',"#menu", function(){
+		$(this).toggleClass('menuopen');
+		$('#mainmenu').toggleClass('nav-open');
+		$('#wrapper').toggleClass('zoom-out');
+		return false;
+	});
+		
+
+	$(document).on('click',".close-trigger", function(){
+		$('#menu').removeClass('menuopen');
+		$('#mainmenu').removeClass('nav-open');
+		$('#wrapper').removeClass('zoom-out');
+		return false;
+	});
 		
 		
 /*--------------------------------------------------------------------------------------------------------------------------------------*/		
