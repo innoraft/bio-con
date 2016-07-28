@@ -196,10 +196,21 @@
 		return false;
 	});
 		
+		
+	$(document).on('click',"#search-trigger", function(){
+		$('#search-form-box').toggleClass('nav-open');
+		$('#wrapper').toggleClass('zoom-out');
+		return false;
+	});	
 
 	$(document).on('click',".close-trigger", function(){
 		$('#menu').removeClass('menuopen');
 		$('#mainmenu').removeClass('nav-open');
+		$('#wrapper').removeClass('zoom-out');
+		return false;
+	});
+	$(document).on('click',".close-search", function(){
+		$('#search-form-box').removeClass('nav-open');
 		$('#wrapper').removeClass('zoom-out');
 		return false;
 	});
