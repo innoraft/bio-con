@@ -223,20 +223,20 @@ input[type="checkbox"], input[type="radio"] { margin:4px 8px 0 ; vertical-align:
 			&.chart-00 {
 				width:230px; height:150px; position:absolute; left:0; top:0;	
 			}
-			&.chart-01 { position:absolute; left:180px; top:12px; width:302px; height:278px;  background:url(../images/chart-01.svg) 0 0 no-repeat; background-size:100% 100%; 
+			&.chart-01 { position:absolute; left:180px; top:12px; width:302px; height:278px;  background:url(../images/chart-01.svg) 0 0 no-repeat; background-size:100% 100%; -webkit-background-size:100% 100%; -ms-background-size:100% 100%; -moz-background-size:100% 100%; 
 			.box-info { 
 				vertical-align:bottom; 
 				h4 { margin:0 0 30px; }
 			 }
 			}
-			&.chart-02 { position:absolute; text-align:center; left:0; top:149px; width:246px; height:264px; background:url(../images/chart-02.svg) 0 0 no-repeat; background-size:100% 100%; 
+			&.chart-02 { position:absolute; text-align:center; left:0; top:149px; width:246px; height:264px; background:url(../images/chart-02.svg) 0 0 no-repeat; background-size:100% 100%; -webkit-background-size:100% 100%; -ms-background-size:100% 100%; -moz-background-size:100% 100%;
 			.box-info { 
 				text-align:right; padding-right:80px; 
 				h4 { margin:0; }
 				.icon-experiment { text-align:left; } 
 			 }
 			}
-			&.chart-03 { position:absolute; left:13px; top:422px; width:252px; height:264px; background:url(../images/chart-03.svg) 0 0 no-repeat; background-size:100% 100%; 
+			&.chart-03 { position:absolute; left:13px; top:422px; width:252px; height:264px; background:url(../images/chart-03.svg) 0 0 no-repeat; background-size:100% 100%; -webkit-background-size:100% 100%; -ms-background-size:100% 100%; -moz-background-size:100% 100%;
 			.box-info { 
 				text-align:right; padding-right:100px; 
 				h4 { margin:0; }
@@ -244,17 +244,17 @@ input[type="checkbox"], input[type="radio"] { margin:4px 8px 0 ; vertical-align:
 			 }
 
 			}
-			&.chart-04 { position:absolute; left:260px; top:541px; width:222px; height:273px; background:url(../images/chart-04.svg) 0 0 no-repeat; background-size:100% 100%;  
+			&.chart-04 { position:absolute; left:272px; top:540px; width:212px; height:273px; background:url(../images/chart-04.svg) 0 0 no-repeat; background-size:100% 100%; -webkit-background-size:100% 100%; -ms-background-size:100% 100%; -moz-background-size:100% 100%;
 			.box-info {
 					h4 { padding-right:78px; }	
 			}
 			}
-			&.chart-05 { position:absolute; left:410px; top:418px; width:244px; height:264px; background:url(../images/chart-05.svg) 0 0 no-repeat; background-size:100% 100%; 
+			&.chart-05 { position:absolute; left:410px; top:418px; width:244px; height:264px; background:url(../images/chart-05.svg) 0 0 no-repeat; background-size:100% 100%; -webkit-background-size:100% 100%; -ms-background-size:100% 100%; -moz-background-size:100% 100%;
 				.box-info {
 					h4 { padding-left:58px; }	
 				}
 			}
-			&.chart-06 { position:absolute; left:407px; top:154px; width:254px; height:254px; background:url(../images/chart-06.svg) 0 0 no-repeat; background-size:100% 100%; }
+			&.chart-06 { position:absolute; left:407px; top:154px; width:254px; height:254px; background:url(../images/chart-06.svg) 0 0 no-repeat; background-size:100% 100%; -webkit-background-size:100% 100%; -ms-background-size:100% 100%; -moz-background-size:100% 100%; }
 			&.chart-07 { position:absolute; left:196px; top:284px; width:260px; height:260px; }
 		}
 	}

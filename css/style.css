@@ -1047,6 +1047,9 @@ input[type="checkbox"], input[type="radio"] {
   height: 278px;
   background: url(../images/chart-01.svg) 0 0 no-repeat;
   background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  -ms-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
 }
 /* line 227, ../sass/style.scss */
 .resech-section .chart-container .chart-slide.chart-01 .box-info {
@@ -1066,6 +1069,9 @@ input[type="checkbox"], input[type="radio"] {
   height: 264px;
   background: url(../images/chart-02.svg) 0 0 no-repeat;
   background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  -ms-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
 }
 /* line 233, ../sass/style.scss */
 .resech-section .chart-container .chart-slide.chart-02 .box-info {
@@ -1089,6 +1095,9 @@ input[type="checkbox"], input[type="radio"] {
   height: 264px;
   background: url(../images/chart-03.svg) 0 0 no-repeat;
   background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  -ms-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
 }
 /* line 240, ../sass/style.scss */
 .resech-section .chart-container .chart-slide.chart-03 .box-info {
@@ -1106,12 +1115,15 @@ input[type="checkbox"], input[type="radio"] {
 /* line 247, ../sass/style.scss */
 .resech-section .chart-container .chart-slide.chart-04 {
   position: absolute;
-  left: 260px;
-  top: 541px;
-  width: 222px;
+  left: 272px;
+  top: 540px;
+  width: 212px;
   height: 273px;
   background: url(../images/chart-04.svg) 0 0 no-repeat;
   background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  -ms-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
 }
 /* line 249, ../sass/style.scss */
 .resech-section .chart-container .chart-slide.chart-04 .box-info h4 {
@@ -1126,6 +1138,9 @@ input[type="checkbox"], input[type="radio"] {
   height: 264px;
   background: url(../images/chart-05.svg) 0 0 no-repeat;
   background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  -ms-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
 }
 /* line 254, ../sass/style.scss */
 .resech-section .chart-container .chart-slide.chart-05 .box-info h4 {
@@ -1140,6 +1155,9 @@ input[type="checkbox"], input[type="radio"] {
   height: 254px;
   background: url(../images/chart-06.svg) 0 0 no-repeat;
   background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  -ms-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
 }
 /* line 258, ../sass/style.scss */
 .resech-section .chart-container .chart-slide.chart-07 {
