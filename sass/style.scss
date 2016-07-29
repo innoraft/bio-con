@@ -370,11 +370,11 @@ input[type="checkbox"], input[type="radio"] { margin:4px 8px 0 ; vertical-align:
 			&:before { content:""; width:44px; height:1px; background:$green; margin:0 0 $padding-small-horizontal*2; display:block; }
 		}	
 		.about-col { width:23.722222222222223%; }
-		.quick-col { width:18.194444444444444%; }
+		.quick-col { width:16.194444444444444%; }
 		.product-col { width:21.277777777777778%; }
-		.rd-col { width: 19.166666666666668%; }
+		.rd-col { width:22.166666666666668%; }
 		.get-touch-col { 
-			width:17.63888888888889%; 
+			width:16.63888888888889%; 
 			.col-info { 
 				position:relative; margin:0 0 10px; padding-left:28px;
 				&:before { content:""; position:absolute; left:0; top:4px; @include sprites(20,20,-434,-302); }
@@ -395,7 +395,6 @@ input[type="checkbox"], input[type="radio"] { margin:4px 8px 0 ; vertical-align:
 	.fmenu {
 		ul {
 			@extend %no-style;
-			padding-left:$padding-small-horizontal+5;
 			li { 
 				a { 
 					display:block; color:#b8b8b9; text-transform:uppercase; padding-left:$padding-small-horizontal*2; position:relative;  
